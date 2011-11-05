@@ -8,7 +8,7 @@ a repl environment in the same tmux window.
 
 for more flexibility try tslime.vim
 
-![screenshot](https://github.com/zweifisch/replit/raw/master/screenshot.png)
+![screenshot](https://github.com/zweifisch/replit.vim/raw/master/screenshot.png)
 
 ## How to use
 
