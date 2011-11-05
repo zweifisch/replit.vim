@@ -17,8 +17,10 @@ for more flexibility try tslime.vim
 3. start repl session in new window
 4. go back to vim
 
-- press <enter> to send visually selected code
-- press <enter> in normal mode will send the current line
-- press <leader><enter> to send the whole buffer
+### Keymaps
+
+* press `<enter>` to send visually selected code
+* press `<enter>` in normal mode will send the current line
+* press `<leader><enter>` to send the whole buffer
 
 
