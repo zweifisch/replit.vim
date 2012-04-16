@@ -10,8 +10,8 @@ let g:replit_loaded = 1
 function! Send_to_Tmux_Pane(text)
 	let target = system("tmux list-panes | grep -v active | cut -d ':' -f 1 | head -1")
 	let text = substitute(a:text, "'", "'\\\\''", 'g')
-	let text = substitute(text, "\t", "   ", 'g')
-	let text = system("echo '".text."' | sed '/^\s*$/ d'")
+	let text = system("echo '".text."' | sed '/^[ \\t]*$/ d;:a;s/\\([\\t]\*\\)[\t]/\\1 /;ta'")
+	let text = substitute(text, "'", "'\\\\''", 'g')
 	call system("tmux set-buffer '" . text . "'" )
 	call system("tmux paste-buffer -t " . target)
 endfunction
